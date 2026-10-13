@@ -1,0 +1,31 @@
+# generated outputs
+results/
+results_*/
+figures/
+figures_*/
+REPORT.md
+REPORT_*.md
+REPORT*.pdf
+summary_*.csv
+graphs.json
+slurm_logs/
+
+# downloaded/cached data
+data/
+
+# latex build artifacts (keep .tex sources, ignore everything generated)
+latex_report/
+latex_report/*.pdf
+latex_report/*.aux
+latex_report/*.log
+latex_report/*.out
+latex_report/geometries/
+latex_report/build*.log
+
+# python / pytest
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# checkpoint dirs (per-triple resumable state)
+.ckpt_*/
