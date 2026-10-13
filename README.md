@@ -120,3 +120,25 @@ much more expensive, see the comments in that file for the cost estimate).
   outputs, not tracked in git (see `.gitignore`)
 - `latex_report/` — a LaTeX "entanglement atlas" built from one production
   run's results (not tracked; rebuild with `latex_report/build.sh`)
+
+## QuTiP: where used, where not
+
+| | used for |
+|---|---|
+| QuTiP | Hamiltonian/state construction (`Qobj`, `tensor`, `expand_operator`) |
+| own numpy/cvxpy | time evolution, partial trace, concurrence (vectorized over the whole time grid); GMN SDP, GS witness, negativity bound, C_GME, Meyer-Wallach Q (no QuTiP equivalent) |
+
+`qnet_qutip/` is a QuTiP-native version of the hot path (`sesolve` + looped
+`Qobj.ptrace`/`qt.concurrence`) built to benchmark against `qnet/evolve.py` +
+`qnet/measures.py`. Both agree to ~1e-8. Result (`qnet_qutip/benchmark.py`,
+n=2 and n=3):
+
+| case | T | numpy | qutip-native | ratio |
+|---|---|---|---|---|
+| n=2 xx\|0> | 80 | 0.005s | 0.026s | 5.2x |
+| n=2 ex\|+> | 5001 | 0.225s | 1.217s | 5.4x |
+| n=3 xx\|0> | 80 | 0.009s | 0.051s | 5.9x |
+| n=3 ex\|+> | 5001 | 0.446s | 2.985s | 6.7x |
+
+QuTiP-native is consistently 5-7x slower, and the gap grows with system
+size — so the vectorized numpy pipeline stays.
