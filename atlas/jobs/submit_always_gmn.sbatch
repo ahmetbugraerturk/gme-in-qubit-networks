@@ -54,7 +54,7 @@ PY=/home/aerturk23/.conda/envs/qutip/bin/python
 export OMP_NUM_THREADS=1
 export MKL_NUM_THREADS=1
 
-cd /scratch/aerturk23/quest
+cd /scratch/aerturk23/quest/atlas
 
 echo "=== $(date) : starting always-GMN run (zz|+>, ex|+>), n<=5, ${SLURM_CPUS_PER_TASK} workers ==="
 "$PY" run.py --all --n-max 5 --always-gmn --combo zz:plus --combo ex:plus --results-dir results_always_gmn

@@ -1,0 +1,30 @@
+[graphs] n=3: loaded 2 connected graphs from networkx.graph_atlas_g() fallback
+{"backend": "numpy_spectral", "n": 3, "graph": 1, "inter": "ex", "init": "plus", "T": 5001, "edges": 3, "first_total": 1.0342170940712094, "t_evolve": 0.0015594912692904472, "t_post": 0.9984290273860097, "t_total": 0.9999885186553001, "max_C_err": 0.0}
+[graphs] n=4: loaded 6 connected graphs from networkx.graph_atlas_g() fallback
+{"backend": "numpy_spectral", "n": 4, "graph": 5, "inter": "ex", "init": "plus", "T": 5001, "edges": 6, "first_total": 2.0870095072314143, "t_evolve": 0.005177590064704418, "t_post": 2.099775191396475, "t_total": 2.1049527814611793, "max_C_err": 0.0}
+[graphs] n=5: loaded 21 connected graphs from networkx.graph_atlas_g() fallback
+{"backend": "numpy_spectral", "n": 5, "graph": 20, "inter": "ex", "init": "plus", "T": 5001, "edges": 10, "first_total": 3.5989520885050297, "t_evolve": 0.011100579053163528, "t_post": 3.486994764767587, "t_total": 3.4980953438207507, "max_C_err": 0.0}
+[graphs] n=3: loaded 2 connected graphs from networkx.graph_atlas_g() fallback
+{"backend": "cupy_spectral", "n": 3, "graph": 1, "inter": "ex", "init": "plus", "T": 5001, "edges": 3, "first_total": 6.792779425159097, "t_evolve": 0.0005779648199677467, "t_post": 0.005996761843562126, "t_total": 0.006574726663529873, "max_C_err": 1.5819346554923897e-08}
+[graphs] n=4: loaded 6 connected graphs from networkx.graph_atlas_g() fallback
+{"backend": "cupy_spectral", "n": 4, "graph": 5, "inter": "ex", "init": "plus", "T": 5001, "edges": 6, "first_total": 0.374434438534081, "t_evolve": 0.000671040266752243, "t_post": 0.011074796319007874, "t_total": 0.011745836585760117, "max_C_err": 1.1774781080069532e-08}
+[graphs] n=5: loaded 21 connected graphs from networkx.graph_atlas_g() fallback
+{"backend": "cupy_spectral", "n": 5, "graph": 20, "inter": "ex", "init": "plus", "T": 5001, "edges": 10, "first_total": 0.37785197980701923, "t_evolve": 0.0007230648770928383, "t_post": 0.02015567570924759, "t_total": 0.020878740586340427, "max_C_err": 1.4784030596688268e-08}
+[graphs] n=3: loaded 2 connected graphs from networkx.graph_atlas_g() fallback
+{"backend": "qutip_cpu", "n": 3, "graph": 1, "inter": "ex", "init": "plus", "T": 5001, "edges": 3, "first_total": 4.967256259173155, "t_evolve": 0.06518346257507801, "t_post": 4.992296419106424, "t_total": 5.057479881681502, "max_C_err": 1.4251651857125416e-08}
+[graphs] n=4: loaded 6 connected graphs from networkx.graph_atlas_g() fallback
+{"backend": "qutip_cpu", "n": 4, "graph": 5, "inter": "ex", "init": "plus", "T": 5001, "edges": 6, "first_total": 10.923736901022494, "t_evolve": 0.0814917292445898, "t_post": 10.563059721142054, "t_total": 10.644551450386643, "max_C_err": 1.0083735926119664e-08}
+[graphs] n=5: loaded 21 connected graphs from networkx.graph_atlas_g() fallback
+{"backend": "qutip_cpu", "n": 5, "graph": 20, "inter": "ex", "init": "plus", "T": 5001, "edges": 10, "first_total": 17.973340023308992, "t_evolve": 0.10159031581133604, "t_post": 17.626444512046874, "t_total": 17.72803482785821, "max_C_err": 7.98820047219137e-09}
+[graphs] n=3: loaded 2 connected graphs from networkx.graph_atlas_g() fallback
+{"backend": "qutip_cuquantum", "n": 3, "graph": 1, "inter": "ex", "init": "plus", "T": 5001, "edges": 3, "error": "cuDensityMatError: CUTENSOR_ERROR (24): "}
+[graphs] n=4: loaded 6 connected graphs from networkx.graph_atlas_g() fallback
+{"backend": "qutip_cuquantum", "n": 4, "graph": 5, "inter": "ex", "init": "plus", "T": 5001, "edges": 6, "error": "cuDensityMatError: CUTENSOR_ERROR (24): "}
+[graphs] n=5: loaded 21 connected graphs from networkx.graph_atlas_g() fallback
+{"backend": "qutip_cuquantum", "n": 5, "graph": 20, "inter": "ex", "init": "plus", "T": 5001, "edges": 10, "error": "cuDensityMatError: CUTENSOR_ERROR (24): "}
+[graphs] n=3: loaded 2 connected graphs from networkx.graph_atlas_g() fallback
+{"backend": "qutip_jax", "n": 3, "graph": 1, "inter": "ex", "init": "plus", "T": 5001, "edges": 3, "first_total": 94.79230024013668, "t_evolve": 16.88995050638914, "t_post": 77.954474279657, "t_total": 94.84442478604615, "max_C_err": 1.7053267247510526e-07}
+[graphs] n=4: loaded 6 connected graphs from networkx.graph_atlas_g() fallback
+{"backend": "qutip_jax", "n": 4, "graph": 5, "inter": "ex", "init": "plus", "T": 5001, "edges": 6, "first_total": 170.43713354784995, "t_evolve": 16.651537662371993, "t_post": 153.5152571676299, "t_total": 170.1667948300019, "max_C_err": 2.1220358813504262e-07}
+[graphs] n=5: loaded 21 connected graphs from networkx.graph_atlas_g() fallback
+{"backend": "qutip_jax", "n": 5, "graph": 20, "inter": "ex", "init": "plus", "T": 5001, "edges": 10, "first_total": 270.43916086293757, "t_evolve": 17.25241786520928, "t_post": 263.26391082350165, "t_total": 280.5163286887109, "max_C_err": 1.5760195054228708e-07}

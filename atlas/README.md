@@ -25,8 +25,8 @@ python run.py --all --n-max 5
 python make_report.py --n-max 5
 ```
 
-For HPC batch runs see `submit_production.sbatch` (full sweep) and
-`submit_always_gmn.sbatch` (exact-SDP variant, no sampling/shortcuts —
+For HPC batch runs see `jobs/submit_production.sbatch` (full sweep) and
+`jobs/submit_always_gmn.sbatch` (exact-SDP variant, no sampling/shortcuts —
 much more expensive, see the comments in that file for the cost estimate).
 
 ## Implementation
@@ -112,14 +112,15 @@ much more expensive, see the comments in that file for the cost estimate).
 - `qnet/` — the package: `graphs.py`, `hamiltonians.py`, `evolve.py`,
   `measures.py`, `gs.py`, `bound.py`, `gmn.py`, `pipeline.py` (simulation),
   `report.py` (CSV/figures/REPORT.md), `tests/`
+- `qnet_qutip/` — QuTiP-native benchmark version of the hot path
 - `run.py` — CLI entry point
 - `make_report.py` — regenerates reports from `results/`
-- `data/graphs/` — cached graph6 files (McKay's collection; downloader also
-  falls back to `networkx.graph_atlas_g()` offline)
-- `results*/`, `figures*/`, `summary_*.csv`, `REPORT*.md` — generated
-  outputs, not tracked in git (see `.gitignore`)
-- `latex_report/` — a LaTeX "entanglement atlas" built from one production
-  run's results (not tracked; rebuild with `latex_report/build.sh`)
+- `jobs/` — SLURM scripts (submit from this folder: `sbatch jobs/<name>.sbatch`)
+- `data/graphs/`, `graphs.json` — cached graph6 files and the derived graph list
+- `results*/`, `figures*/`, `summary_*.csv`, `REPORT*.md`, `latex_report/`,
+  `slurm_logs/` — phase 1 outputs (untracked); `latex_report/` is the atlas
+- Sibling folders at the repo root: `../4-qubit/` (next task) and
+  `../gpu_bench/` (GPU backend benchmark, imports `qnet` from here)
 
 ## QuTiP: where used, where not
 

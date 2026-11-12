@@ -3,6 +3,8 @@ results/
 results_*/
 figures/
 figures_*/
+report/
+artifact/
 REPORT.md
 REPORT_*.md
 REPORT*.pdf
